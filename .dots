@@ -16,7 +16,7 @@ function runDots() {
             echo "Syncing the dev-setup repo to your local machine."
             echo "------------------------------"
             echo ""
-            cd ~ && curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
+            cd ~ && curl -#L https://github.com/dysnomian/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
         fi
         if [ $ARG == "osxprep" ] || [ $ARG == "all" ]; then
             # Run the osxprep.sh Script
@@ -87,13 +87,29 @@ function runDots() {
             echo ""
             ./web.sh
         fi
-        if [ $ARG == "android" ] || [ $ARG == "all" ]; then
-            # Run the android.sh Script
+        if [ $ARG == "newrelic" ] || [ $ARG == "all" ]; then
+            # Run the newrelic.sh Script
             echo "------------------------------"
-            echo "Setting up Android development environment."
+            echo "Setting up New Relic development tools."
             echo "------------------------------"
             echo ""
-            ./android.sh
+            ./newrelic.sh
+        fi
+        if [ $ARG == "go" ] || [ $ARG == "all" ]; then
+            # Run the go.sh Script
+            echo "------------------------------"
+            echo "Setting up Go development tools."
+            echo "------------------------------"
+            echo ""
+            ./go.sh
+        fi
+        if [ $ARG == "elixir" ] || [ $ARG == "all" ]; then
+            # Run the elixir.sh Script
+            echo "------------------------------"
+            echo "Setting up Elixir development tools."
+            echo "------------------------------"
+            echo ""
+            ./elixir.sh
         fi
     done
 

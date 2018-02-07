@@ -24,11 +24,13 @@ brew install postgresql
 brew install mongo
 brew install redis
 brew install elasticsearch
+brew install rethinkdb
 
 # Install mysql workbench
 # Install Cask
 brew install caskroom/cask/brew-cask
 brew cask install --appdir="/Applications" mysqlworkbench
+brew cask install --appdir="/Applications" sequel-pro
 
 # Remove outdated versions from the cellar.
 brew cleanup
